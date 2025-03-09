@@ -12,6 +12,8 @@ function exibirMensagemInicial(){
     exibirTextoNaTela('p', 'Adivinhe o número de 1 a 500:');
 }
 
+exibirMensagemInicial();
+
 function verificarChute() {
     let chute = document.querySelector('input').value;
     if (isNaN(chute) || chute < 1 || chute > 500) {
@@ -63,3 +65,9 @@ function reiniciarJogo() {
     exibirMensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
 }
+
+document.querySelector('input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        verificarChute();
+    }
+});
