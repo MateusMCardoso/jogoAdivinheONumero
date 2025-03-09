@@ -9,7 +9,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function exibirMensagemInicial(){
     exibirTextoNaTela('h1','Jogo do número secreto!');
-    exibirTextoNaTela('p', 'Adivinhe o número de 1 a 100:');
+    exibirTextoNaTela('p', 'Adivinhe o número de 1 a 500:');
 }
 
 function verificarChute() {
@@ -33,9 +33,9 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio(){
-   let numeroEscolhido = parseInt(Math.random()*100+1);
+   let numeroEscolhido = parseInt(Math.random()*500+1);
    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
-   if (quantidadeDeElementosNaLista == 100){
+   if (quantidadeDeElementosNaLista == 500){
     listaDeNumerosSorteados = [];
   }
    if (listaDeNumerosSorteados.includes(numeroEscolhido)){
